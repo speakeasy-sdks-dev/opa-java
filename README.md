@@ -129,7 +129,7 @@ public class Application {
         ExecuteDefaultPolicyWithInputResponse res = sdk.executeDefaultPolicyWithInput()
                 .pretty(false)
                 .acceptEncoding(GzipAcceptEncoding.GZIP)
-                .input(Input.of(8203.11d))
+                .input(Input.of(4963.69d))
                 .call();
 
         if (res.result().isPresent()) {
@@ -284,7 +284,7 @@ public class Application {
         ExecuteDefaultPolicyWithInputResponse res = sdk.executeDefaultPolicyWithInput()
                 .pretty(false)
                 .acceptEncoding(GzipAcceptEncoding.GZIP)
-                .input(Input.of(8203.11d))
+                .input(Input.of(4963.69d))
                 .call();
 
         if (res.result().isPresent()) {
@@ -324,7 +324,7 @@ public class Application {
         ExecuteDefaultPolicyWithInputResponse res = sdk.executeDefaultPolicyWithInput()
                 .pretty(false)
                 .acceptEncoding(GzipAcceptEncoding.GZIP)
-                .input(Input.of(8203.11d))
+                .input(Input.of(4963.69d))
                 .call();
 
         if (res.result().isPresent()) {
@@ -373,7 +373,7 @@ public class Application {
         ExecuteDefaultPolicyWithInputResponse res = sdk.executeDefaultPolicyWithInput()
                 .pretty(false)
                 .acceptEncoding(GzipAcceptEncoding.GZIP)
-                .input(Input.of(8203.11d))
+                .input(Input.of(4963.69d))
                 .call();
 
         if (res.result().isPresent()) {
@@ -421,7 +421,7 @@ public class Application {
         ExecuteDefaultPolicyWithInputResponse res = sdk.executeDefaultPolicyWithInput()
                 .pretty(false)
                 .acceptEncoding(GzipAcceptEncoding.GZIP)
-                .input(Input.of(8203.11d))
+                .input(Input.of(4963.69d))
                 .call();
 
         if (res.result().isPresent()) {
