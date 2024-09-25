@@ -28,6 +28,7 @@ generatedFiles:
   - build.gradle
   - docs/models/errors/BatchServerError.md
   - docs/models/errors/ClientError.md
+  - docs/models/errors/ClientError1.md
   - docs/models/errors/Errors.md
   - docs/models/errors/Location.md
   - docs/models/errors/ServerError.md
@@ -57,9 +58,12 @@ generatedFiles:
   - docs/models/shared/Location.md
   - docs/models/shared/Provenance.md
   - docs/models/shared/Responses.md
+  - docs/models/shared/ResponsesErrors.md
+  - docs/models/shared/ResponsesLocation.md
   - docs/models/shared/Result.md
   - docs/models/shared/Revision.md
   - docs/models/shared/Security.md
+  - docs/models/shared/ServerError.md
   - docs/models/shared/ServerErrorWithStatusCode.md
   - docs/models/shared/SuccessfulPolicyResponse.md
   - docs/models/shared/SuccessfulPolicyResponseWithStatusCode.md
@@ -75,6 +79,7 @@ generatedFiles:
   - src/main/java/com/styra/opa/openapi/models/errors/AuthException.java
   - src/main/java/com/styra/opa/openapi/models/errors/BatchServerError.java
   - src/main/java/com/styra/opa/openapi/models/errors/ClientError.java
+  - src/main/java/com/styra/opa/openapi/models/errors/ClientError1.java
   - src/main/java/com/styra/opa/openapi/models/errors/Errors.java
   - src/main/java/com/styra/opa/openapi/models/errors/Location.java
   - src/main/java/com/styra/opa/openapi/models/errors/SDKError.java
@@ -111,9 +116,12 @@ generatedFiles:
   - src/main/java/com/styra/opa/openapi/models/shared/Location.java
   - src/main/java/com/styra/opa/openapi/models/shared/Provenance.java
   - src/main/java/com/styra/opa/openapi/models/shared/Responses.java
+  - src/main/java/com/styra/opa/openapi/models/shared/ResponsesErrors.java
+  - src/main/java/com/styra/opa/openapi/models/shared/ResponsesLocation.java
   - src/main/java/com/styra/opa/openapi/models/shared/Result.java
   - src/main/java/com/styra/opa/openapi/models/shared/Revision.java
   - src/main/java/com/styra/opa/openapi/models/shared/Security.java
+  - src/main/java/com/styra/opa/openapi/models/shared/ServerError.java
   - src/main/java/com/styra/opa/openapi/models/shared/ServerErrorWithStatusCode.java
   - src/main/java/com/styra/opa/openapi/models/shared/SuccessfulPolicyResponse.java
   - src/main/java/com/styra/opa/openapi/models/shared/SuccessfulPolicyResponseWithStatusCode.java
@@ -191,7 +199,7 @@ examples:
         application/json: {"input": true}
       responses:
         "200":
-          application/json: {"result": false}
+          application/json: {"result": true}
         "400":
           application/json: {"code": "<value>", "message": "<value>"}
         "500":
@@ -209,7 +217,7 @@ examples:
         "200":
           application/json: {"batch_decision_id": "1bef6b7d-cd13-4890-bfe1-fd2e8de32189", "responses": {"key": {"result": "<value>"}}}
         "207":
-          application/json: {"responses": {"key": {"http_status_code": "200", "code": "<value>", "message": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}}}
+          application/json: {"responses": {"key": {"http_status_code": "200", "result": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}}}
         "400":
           application/json: {"code": "<value>", "message": "<value>"}
         "500":

@@ -145,7 +145,7 @@ public class Application {
 package hello.world;
 
 import com.styra.opa.openapi.OpaApiClient;
-import com.styra.opa.openapi.models.errors.ClientError;
+import com.styra.opa.openapi.models.errors.ClientError1;
 import com.styra.opa.openapi.models.errors.ServerError;
 import com.styra.opa.openapi.models.operations.ExecutePolicyWithInputRequest;
 import com.styra.opa.openapi.models.operations.ExecutePolicyWithInputRequestBody;
@@ -156,7 +156,7 @@ import java.lang.Exception;
 
 public class Application {
 
-    public static void main(String[] args) throws ClientError, ServerError, Exception {
+    public static void main(String[] args) throws ClientError1, ServerError, Exception {
 
         OpaApiClient sdk = OpaApiClient.builder()
                 .security(Security.builder()
@@ -189,7 +189,7 @@ package hello.world;
 
 import com.styra.opa.openapi.OpaApiClient;
 import com.styra.opa.openapi.models.errors.BatchServerError;
-import com.styra.opa.openapi.models.errors.ClientError;
+import com.styra.opa.openapi.models.errors.ClientError1;
 import com.styra.opa.openapi.models.operations.ExecuteBatchPolicyWithInputRequest;
 import com.styra.opa.openapi.models.operations.ExecuteBatchPolicyWithInputRequestBody;
 import com.styra.opa.openapi.models.operations.ExecuteBatchPolicyWithInputResponse;
@@ -200,7 +200,7 @@ import java.util.Map;
 
 public class Application {
 
-    public static void main(String[] args) throws ClientError, BatchServerError, Exception {
+    public static void main(String[] args) throws ClientError1, BatchServerError, Exception {
 
         OpaApiClient sdk = OpaApiClient.builder()
                 .security(Security.builder()

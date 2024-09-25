@@ -6,6 +6,7 @@ package com.styra.opa.openapi;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.styra.opa.openapi.models.errors.BatchServerError;
+import com.styra.opa.openapi.models.errors.ClientError1;
 import com.styra.opa.openapi.models.errors.ClientError;
 import com.styra.opa.openapi.models.errors.SDKError;
 import com.styra.opa.openapi.models.errors.ServerError;
@@ -496,9 +497,9 @@ public class OpaApiClient implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "400")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                ClientError _out = Utils.mapper().readValue(
+                ClientError1 _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<ClientError>() {});
+                    new TypeReference<ClientError1>() {});
                 throw _out;
             } else {
                 throw new SDKError(
@@ -659,9 +660,9 @@ public class OpaApiClient implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "400")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                ClientError _out = Utils.mapper().readValue(
+                ClientError1 _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<ClientError>() {});
+                    new TypeReference<ClientError1>() {});
                 throw _out;
             } else {
                 throw new SDKError(
@@ -838,9 +839,9 @@ public class OpaApiClient implements
         }
         if (Utils.statusCodeMatches(_httpRes.statusCode(), "400")) {
             if (Utils.contentTypeMatches(_contentType, "application/json")) {
-                ClientError _out = Utils.mapper().readValue(
+                ClientError1 _out = Utils.mapper().readValue(
                     Utils.toUtf8AndClose(_httpRes.body()),
-                    new TypeReference<ClientError>() {});
+                    new TypeReference<ClientError1>() {});
                 throw _out;
             } else {
                 throw new SDKError(
