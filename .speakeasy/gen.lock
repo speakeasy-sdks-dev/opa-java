@@ -13,7 +13,7 @@ features:
   java:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.1
-    core: 3.30.1
+    core: 3.30.2
     examples: 2.81.3
     flattening: 2.81.1
     globalSecurity: 2.82.7
@@ -191,7 +191,7 @@ examples:
         application/json: {"input": true}
       responses:
         "200":
-          application/json: {"result": false}
+          application/json: {"result": true}
         "400":
           application/json: {"code": "<value>", "message": "<value>"}
         "500":
@@ -209,7 +209,7 @@ examples:
         "200":
           application/json: {"batch_decision_id": "1bef6b7d-cd13-4890-bfe1-fd2e8de32189", "responses": {"key": {"result": "<value>"}}}
         "207":
-          application/json: {"responses": {"key": {"http_status_code": "200", "code": "<value>", "message": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}}}
+          application/json: {"responses": {"key": {"http_status_code": "200", "result": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}}}
         "400":
           application/json: {"code": "<value>", "message": "<value>"}
         "500":
