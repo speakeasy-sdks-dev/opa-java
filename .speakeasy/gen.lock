@@ -1,10 +1,10 @@
 lockVersion: 2.0.0
 id: 47e8e950-a454-4ebb-9f78-86fda7dfa0c2
 management:
-  docChecksum: 54d33facef3aa19f358d15ab44e34141
+  docChecksum: d27d7560f40fe2bd553e36ae640781e7
   docVersion: 0.2.0
-  speakeasyVersion: 1.406.0
-  generationVersion: 2.429.0
+  speakeasyVersion: internal
+  generationVersion: 2.438.5
   releaseVersion: 1.8.0
   configChecksum: 39fc35b210cab57386c8f5c0d40d9dcb
   repoURL: https://github.com/StyraInc/opa-java.git
@@ -166,97 +166,60 @@ examples:
   executeBatchPolicyWithInput:
     speakeasy-default-execute-batch-policy-with-input:
       parameters:
-        header: {}
         path:
-          path: app/rbac
+          path: "app/rbac"
         query: {}
+        header: {}
       requestBody:
-        application/json:
-          inputs:
-            key: "6919.52"
+        application/json: {"inputs": {"key": "6919.52"}}
       responses:
         "200":
-          application/json:
-            batch_decision_id: 1bef6b7d-cd13-4890-bfe1-fd2e8de32189
-            responses:
-              key:
-                result: <value>
+          application/json: {"batch_decision_id": "1bef6b7d-cd13-4890-bfe1-fd2e8de32189", "responses": {"key": {"result": "<value>"}}}
         "207":
-          application/json:
-            responses:
-              key:
-                code: <value>
-                decision_id: b84cf736-213c-4932-a8e4-bb5c648f1b4d
-                http_status_code: "200"
-                message: <value>
+          application/json: {"responses": {"key": {"http_status_code": "200", "result": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}}}
         "400":
-          application/json:
-            code: <value>
-            message: <value>
+          application/json: {"code": "<value>", "message": "<value>"}
         "500":
-          application/json:
-            responses:
-              key:
-                code: <value>
-                decision_id: b84cf736-213c-4932-a8e4-bb5c648f1b4d
-                message: <value>
+          application/json: {"responses": {"key": {"code": "<value>", "message": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}}}
   executeDefaultPolicyWithInput:
     speakeasy-default-execute-default-policy-with-input:
       requestBody:
         application/json: "4963.69"
       responses:
         "200":
-          application/json: <value>
+          application/json: "<value>"
         "400":
-          application/json:
-            code: <value>
-            message: <value>
+          application/json: {"code": "<value>", "message": "<value>"}
         "500":
-          application/json:
-            code: <value>
-            decision_id: b84cf736-213c-4932-a8e4-bb5c648f1b4d
-            message: <value>
+          application/json: {"code": "<value>", "message": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}
   executePolicy:
     speakeasy-default-execute-policy:
       parameters:
-        header: {}
         path:
-          path: app/rbac
+          path: "app/rbac"
         query: {}
+        header: {}
       responses:
         "200":
-          application/json:
-            result: false
+          application/json: {"result": false}
         "400":
-          application/json:
-            code: <value>
-            message: <value>
+          application/json: {"code": "<value>", "message": "<value>"}
         "500":
-          application/json:
-            code: <value>
-            decision_id: b84cf736-213c-4932-a8e4-bb5c648f1b4d
-            message: <value>
+          application/json: {"code": "<value>", "message": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}
   executePolicyWithInput:
     speakeasy-default-execute-policy-with-input:
       parameters:
-        header: {}
         path:
-          path: app/rbac
+          path: "app/rbac"
         query: {}
+        header: {}
       requestBody:
-        application/json:
-          input: true
+        application/json: {"input": true}
       responses:
         "200":
-          application/json:
-            result: false
+          application/json: {"result": true}
         "400":
-          application/json:
-            code: <value>
-            message: <value>
+          application/json: {"code": "<value>", "message": "<value>"}
         "500":
-          application/json:
-            code: <value>
-            decision_id: b84cf736-213c-4932-a8e4-bb5c648f1b4d
-            message: <value>
+          application/json: {"code": "<value>", "message": "<value>", "decision_id": "b84cf736-213c-4932-a8e4-bb5c648f1b4d"}
   health: {}
