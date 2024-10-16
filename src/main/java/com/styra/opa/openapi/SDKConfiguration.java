@@ -24,7 +24,7 @@ class SDKConfiguration {
     private static final String LANGUAGE = "java";
     public static final String OPENAPI_DOC_VERSION = "0.2.0";
     public static final String SDK_VERSION = "1.8.0";
-    public static final String GEN_VERSION = "2.429.0";
+    public static final String GEN_VERSION = "2.438.7";
     private static final String BASE_PACKAGE = "com.styra.opa.openapi";
     public static final String USER_AGENT = 
             String.format("speakeasy-sdk/%s %s %s %s %s", 
