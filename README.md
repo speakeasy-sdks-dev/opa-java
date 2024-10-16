@@ -248,53 +248,6 @@ public class Application {
 <!-- Start Server Selection [server] -->
 ## Server Selection
 
-### Select Server by Index
-
-You can override the default server globally by passing a server index to the `serverIndex` builder method when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
-
-| # | Server | Variables |
-| - | ------ | --------- |
-| 0 | `http://localhost:8181` | None |
-
-#### Example
-
-```java
-package hello.world;
-
-import com.styra.opa.openapi.OpaApiClient;
-import com.styra.opa.openapi.models.errors.ClientError;
-import com.styra.opa.openapi.models.errors.ServerError;
-import com.styra.opa.openapi.models.operations.ExecuteDefaultPolicyWithInputResponse;
-import com.styra.opa.openapi.models.shared.GzipAcceptEncoding;
-import com.styra.opa.openapi.models.shared.Input;
-import com.styra.opa.openapi.models.shared.Security;
-import java.lang.Exception;
-
-public class Application {
-
-    public static void main(String[] args) throws ClientError, ServerError, Exception {
-
-        OpaApiClient sdk = OpaApiClient.builder()
-                .serverIndex(0)
-                .security(Security.builder()
-                    .bearerAuth("<YOUR_BEARER_TOKEN_HERE>")
-                    .build())
-            .build();
-
-        ExecuteDefaultPolicyWithInputResponse res = sdk.executeDefaultPolicyWithInput()
-                .pretty(false)
-                .acceptEncoding(GzipAcceptEncoding.GZIP)
-                .input(Input.of(4963.69d))
-                .call();
-
-        if (res.result().isPresent()) {
-            // handle response
-        }
-    }
-}
-```
-
-
 ### Override Server URL Per-Client
 
 The default server can also be overridden globally by passing a URL to the `serverURL` builder method when initializing the SDK client instance. For example:
